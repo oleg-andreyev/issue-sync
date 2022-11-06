@@ -14,7 +14,7 @@ LD_FLAGS=-ldflags "-X $(REPO_PATH)/cmd.Version=$(VERSION)"
 build: bin/$(PROJ)
 
 bin/$(PROJ): $(SOURCES)
-	@go build -o bin/$(PROJ) $(LD_FLAGS) $(REPO_PATH)
+	@go build -mod=mod -o bin/$(PROJ) $(LD_FLAGS) $(REPO_PATH)
 
 clean:
 	@rm bin/*
